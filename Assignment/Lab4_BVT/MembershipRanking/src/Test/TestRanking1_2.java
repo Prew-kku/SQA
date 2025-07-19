@@ -15,7 +15,7 @@ class TestRanking1_2 {
     @ParameterizedTest
     @CsvSource({
         // purchaseTotal, frequency, points, expectedRank
-    	"0, 15, 500, Standard",
+    	"-1, 15, 500, แจ้ง error ไม่สามารถใส่ค่าลบได้",
     	"0, 15, 500, Standard",
     	"1, 15, 500, Standard",
     	"50000, 15, 500, Gold",
@@ -28,12 +28,13 @@ class TestRanking1_2 {
     	"50000, 30, 500, Gold",
     	"50000, 31, 500, Gold",
     	"50000, 32, 500, Gold",
-    	"50000, 15, 0, Standard",
+    	"50000, 15, -1, แจ้ง error ไม่สามารถใส่ค่าลบได้",
     	"50000, 15, 0, Standard",
     	"50000, 15, 1, Standard",
     	"50000, 15, 999, Gold",
     	"50000, 15, 1000, Gold",
     	"50000, 15, 1001, Gold"
+
 
     })
     void testRobustBoundary(int purchase, int freq, int points, String expected) {
