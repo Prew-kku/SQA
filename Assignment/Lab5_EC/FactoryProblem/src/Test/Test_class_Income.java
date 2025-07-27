@@ -1,14 +1,43 @@
-	package Test;
+package Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 class Test_class_Income {
 
-	@Test
-	void test() {
-		fail("Not yet implemented");
-	}
-
+	@ParameterizedTest
+	@CsvSource({
+	    "1000, 300, 500, 29000",
+	    "1000, 300, 1750, 54000",
+	    "1000, 300, 400, -1",
+	    "1000, 550, 500, 36500",
+	    "1000, 550, 1750, 61500",
+	    "1000, 550, 400, -1",
+	    "1000, 200, 500, -1",
+	    "1000, 200, 1750, -1",
+	    "1000, 200, 400, -1",
+	    "2500, 300, 500, 44000",
+	    "2500, 300, 1750, 69000",
+	    "2500, 300, 400, -1",
+	    "2500, 550, 500, 51500",
+	    "2500, 550, 1750, 76500",
+	    "2500, 550, 400, -1",
+	    "2500, 200, 500, -1",
+	    "2500, 200, 1750, -1",
+	    "2500, 200, 400, -1",
+	    "900, 300, 500, -1",
+	    "900, 300, 1750, -1",
+	    "900, 300, 400, -1",
+	    "900, 550, 500, -1",
+	    "900, 550, 1750, -1",
+	    "900, 550, 400, -1",
+	    "900, 200, 500, -1",
+	    "900, 200, 1750, -1",
+	    "900, 200, 400, -1"
+	})
+    void testCalculateIncome(int numImpeller, int numMotor, int numCover, double expected) {
+        Income incomeCalculator = new Income();
+        assertEquals(expected, incomeCalculator.calculateIncome(numImpeller, numMotor, numCover), 0.001);
+    }
 }
