@@ -41,7 +41,7 @@ public class ShippingVehicle {
     		}
         
     		if(smallSize < total){
-    			shiplist.add(CANNOT_SHIP_ITEM);
+    			shiplist.add(CANNOT_SHIP_ITEM);	
     			return shiplist;
     		}
     		else {
