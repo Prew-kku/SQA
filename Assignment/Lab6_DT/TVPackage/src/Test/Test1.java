@@ -1,4 +1,5 @@
 package Test;
+//จุฬาราช คูณคำ 663380378-4
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -11,7 +12,7 @@ class Test1 {
         // Package, offline, live, 1Yr, expected
         //Standard
         "STD, false, false, false, 150",
-        "STD, true, false, false, 250",
+        "STD, true, false, false, 250", 	
         "STD, false, true, false, 250",
         "STD, true, true, false, 350",
         "STD, false, false, true, 100",
