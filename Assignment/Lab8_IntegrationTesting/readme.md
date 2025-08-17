@@ -1,2 +1,2 @@
 ## google docs
-https://docs.google.com/document/d/1nyCuoaqmTH9kdFRye0-p0agAR7WiO7K_cUqb4S3kt68/edit?usp=sharing
+https://docs.google.com/document/d/1yJeFYaAtI61_46Kapr9HKXhzkXZrOgo157C3NoKmhSo/edit?usp=sharing
