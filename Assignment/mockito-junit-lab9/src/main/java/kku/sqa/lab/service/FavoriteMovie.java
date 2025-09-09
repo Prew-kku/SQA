@@ -1,6 +1,8 @@
- package kku.sqa.lab.service;
+package kku.sqa.lab.service;
 
-import java.util.ArrayList; import java.util.Collections; import java.util.List;
+import java.util.ArrayList; 
+import java.util.Collections; 
+import java.util.List;
 
 import kku.sqa.lab.api.MovieService;
 
@@ -13,10 +15,14 @@ public FavoriteMovie(MovieService movieService) {
 }
 
 public List<String> getFavoriteByGenre(String username, String genre) {
-    if (username == null || genre == null) return Collections.emptyList();
+    if (username == null || genre == null) { 
+    	return Collections.emptyList();
+    	}
 
     List<String> all = movieService.getPurchasedMovies(username);
-    if (all == null || all.isEmpty()) return Collections.emptyList();
+    if (all == null || all.isEmpty()) {
+    	return Collections.emptyList();
+    	}
 
     String target = genre.trim().toLowerCase();
     List<String> result = new ArrayList<>();
